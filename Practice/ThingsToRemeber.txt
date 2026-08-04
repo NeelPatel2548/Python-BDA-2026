@@ -1,0 +1,9 @@
+1. Which one to use?
+
+List → Ordered, mutable sequence; use for arrays and most DSA problems.
+
+Tuple → Ordered, immutable data; use for fixed records or dictionary keys.
+
+Dictionary → Fast key–value lookup; use for frequency counting, hashing, caching.
+
+Set → Unique values and fast membership tests; use for duplicate removal and set operations.

@@ -53,3 +53,20 @@
 #     print("\n")
 #     for j in a2:
 #         print(i * j)
+
+
+
+
+# | Method             | Purpose                                | Example                     |
+# | ------------------ | -------------------------------------- | --------------------------- |
+# | `append(x)`        | Add an element at the end              | `arr.append(10)`            |
+# | `extend(iterable)` | Add multiple elements                  | `arr.extend([4, 5])`        |
+# | `insert(i, x)`     | Insert at a specific index             | `arr.insert(1, 100)`        |
+# | `remove(x)`        | Remove the first occurrence of a value | `arr.remove(5)`             |
+# | `pop([i])`         | Remove and return an element           | `arr.pop()` or `arr.pop(2)` |
+# | `clear()`          | Remove all elements                    | `arr.clear()`               |
+# | `index(x)`         | Find the index of a value              | `arr.index(20)`             |
+# | `count(x)`         | Count occurrences                      | `arr.count(5)`              |
+# | `sort()`           | Sort the list                          | `arr.sort()`                |
+# | `reverse()`        | Reverse the list                       | `arr.reverse()`             |
+# | `copy()`           | Create a shallow copy                  | `new_arr = arr.copy()`      |
