@@ -1,9 +1,5 @@
+f = open("Demo.txt", "r")
 
+print(f.read())
 
-f = open("Demo.txt")
-print(f)
-# read = file.read()
-
-# print(read)
-
-# file.close()
+f.close()
