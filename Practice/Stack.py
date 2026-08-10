@@ -10,7 +10,9 @@ class stacking:
           return 0
     
     def poping(self):
-        
+
+        stack.remove(stack[-1])
+
         # stack.pop()
         print(stack)
         return 0 
