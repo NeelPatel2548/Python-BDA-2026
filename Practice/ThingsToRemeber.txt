@@ -7,3 +7,12 @@ Tuple → Ordered, immutable data; use for fixed records or dictionary keys.
 Dictionary → Fast key–value lookup; use for frequency counting, hashing, caching.
 
 Set → Unique values and fast membership tests; use for duplicate removal and set operations.
+
+for 2D array kind of working this is loop workflow:
+
+for i in range(1, len(nums) + 1):       ** it gonna work for rows, and it start from 1, or else it have one extra empty row if we start it from 0.
+            for j in range(i):          ** it gonna work for columns, and it start from 0.
+                print(nums[j], end=" ")
+            print()
+
+range(start, stop, step)        ** by default, it take stop value.    
