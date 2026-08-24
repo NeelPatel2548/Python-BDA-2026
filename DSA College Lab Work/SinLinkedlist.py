@@ -49,6 +49,35 @@ class LinkedList:
             return False
         return False
 
+    def delAtFront(self):
+        if self.isElement() == True:
+            temp = self.head
+            if temp.next == None:
+                return False
+            else:
+                self.head = temp.next
+        return False
+
+    def delAtEnd(self):
+        if self.isElement() == True:
+            temp = self.head
+
+            while temp.next.next is not None:
+                temp = temp.next
+
+            temp.next = None
+        return False
+
+    def delSpecific(self, key):
+        if self.isElement() == True:
+            temp = self.head
+
+            while temp.next is not None:
+                if temp.next.data == key:
+                    temp.next = temp.next.next
+                temp = temp.next
+        return False
+    
     def display(self):
         temp = self.head
         while temp is not None:
@@ -64,11 +93,25 @@ l.insBeg(20)
 l.insBeg(30)
 l.insBeg(40)
 l.insEnd(45)
+l.insEnd(98)
+l.insEnd(300)
+l.insEnd(450)
 
+print("Original Linked list: ")
 l.display()
 
-key = int(input('Enter key: '))
-l.atSpecific(69, key)
+#Adding Element at specific position
+# key = int(input('Enter key: '))
+# l.atSpecific(69, key)
 
+l.delAtFront()
+print("Delete First Element: ")
+l.display()
 
+l.delAtEnd()
+print("Delete Last Element: ")
+l.display()
+
+l.delSpecific(98)
+print("Delete element 98 :")
 l.display()
