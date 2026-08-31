@@ -38,18 +38,18 @@ class LinkedList:
             # print(temp.data, end=" - > ")
             count += 1
             kart2 = kart2.next
-        print(count)
+        # print(count)
 
 
         #Dividing
         stop = count / 2
         count = 0
         kart2 = self.head
-        print(count, stop)
+        # print(count, stop)
         while kart2 is not None:
             if count == stop:
                 self.breakpoint = kart2.data
-                print("Break point: ",kart2.data)
+                # print("Break point: ",kart2.data)
                 return
             count += 1
             kart2 = kart2.next
@@ -59,10 +59,11 @@ class LinkedList:
 
         while temp is not None:
             if(temp.next.data == self.breakpoint):
-                self.newLink = temp.next.next
+                self.newLink = temp.next
                 temp.next = None
             temp = temp.next
-            
+
+        print("New Queue: ")    
         temp = self.newLink
         while temp is not None:
             print(temp.data, end=" - > ")
@@ -87,8 +88,10 @@ l.insBeg(40)
 l.insBeg(50)
 l.insBeg(60)
 
+print("Whole List : ")
 l.display()
 
 l.solution()
 l.making()
+print("Old Queue: ")
 l.display()
