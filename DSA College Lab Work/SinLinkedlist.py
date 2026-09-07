@@ -1,3 +1,4 @@
+import sys
 class Node:
     def __init__(self, data):
         self.data = data
@@ -83,35 +84,60 @@ class LinkedList:
         while temp is not None:
             print(temp.data, end=" - > ")
             temp = temp.next
-        print(None)
-
-
+        print(None, "\n\n\n")
 
 l = LinkedList()
-l.insBeg(10)
-l.insBeg(20)
-l.insBeg(30)
-l.insBeg(40)
-l.insEnd(45)
-l.insEnd(98)
-l.insEnd(300)
-l.insEnd(450)
+for i in range(100):
+    inp = input("1. insBeg(self, data)\n" \
+                "2. insEnd(self, data)\n" \
+                "3. InsatSpecific(self, data, key)\n" \
+                "4. delAtFront(self)\n" \
+                "5. delSpecific(self, key)\n" \
+                "6. delAtEnd(self)\n" \
+                "7. display(self)\n" \
+                "8. Exit\n" \
+                "Enter your choice: ")
+    match int(inp):
+        case 1:
+            val = input("Enter Value: ")
+            l.insBeg(int(val))
 
-print("Original Linked list: ")
-l.display()
+        case 2:
+            val = input("Enter Value: ")
+            l.insEnd(val)
+        case 3:
+            key = int(input('Enter key: '))
+            val = input("Enter Value: ")
+            l.atSpecific(val, key)
 
-#Adding Element at specific position
-# key = int(input('Enter key: '))
-# l.atSpecific(69, key)
+        case 4:
+            l.delAtFront()
+            print("Delete First Element: ")
+            l.display()
 
-l.delAtFront()
-print("Delete First Element: ")
-l.display()
+        case 5:
+            l.display()
+            val = input("Enter Value you want to delete: ")
+            l.delSpecific(val)
 
-l.delAtEnd()
-print("Delete Last Element: ")
-l.display()
+        case 6: 
+            l.delAtEnd()
+            print("Delete Last Element: ")
+            l.display()
 
-l.delSpecific(98)
-print("Delete element 98 :")
-l.display()
+        case 7:
+            l.display()    
+            
+        case 8:
+            sys.exit("Existing............")
+
+
+
+    
+    
+ 
+        
+
+    
+
+

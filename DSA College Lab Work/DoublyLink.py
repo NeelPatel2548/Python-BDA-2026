@@ -130,21 +130,9 @@ class DoublyCircularLinkedList:
                 break
         print("(back to head)")
 
-    def displayReverse(self):
-        if self.head is None:
-            print(None)
-            return
-
-        temp = self.head.prev          # start at the last node
-        while True:
-            print(temp.data, end=" <-> ")
-            if temp == self.head:
-                break
-            temp = temp.prev
-        print("(back to head)")
-
 
 l = DoublyCircularLinkedList()
+
 l.insBeg(10)
 l.insBeg(20)
 l.insBeg(30)
@@ -172,6 +160,3 @@ l.display()
 l.delSpecific(98)
 print("Delete element 98 :")
 l.display()
-
-print("Same list, walked backwards: ")
-l.displayReverse()

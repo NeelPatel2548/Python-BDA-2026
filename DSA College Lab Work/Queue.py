@@ -22,6 +22,18 @@ class Queue:
             self.rear = self.rear + 1
             self.que[self.rear] = data
             print("Element is: ",self.que[self.rear])
+
+    def dequeue(self):
+        if (self.isEmpty == True):
+            print("Queue is Empty")
+        else:
+            print(self.que[self.front])
+
+
+            # self.que[self.front] = None
+            # print("Element Removed")
+
+
     
     def displayQueue(self):
         print("Front", end=' - ')
@@ -39,5 +51,9 @@ qu.enqueue(20)
 qu.enqueue(30)
 qu.enqueue(40)
 qu.enqueue(50)
+
+qu.displayQueue()
+
+qu.dequeue()
 
 qu.displayQueue()
