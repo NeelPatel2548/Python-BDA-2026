@@ -1,3 +1,4 @@
+
 import math
 from collections import deque
 
@@ -35,6 +36,7 @@ for u, v, w in edges:
 for v in vertices:
     adj[v].sort()
 
+
 # (A) DISPLAY GRAPH
 
 def displayList():
@@ -45,10 +47,23 @@ def displayList():
 
 def displayMatrix():
     print("\nWEIGHTED ADJACENCY MATRIX")
-    print("  ", vertices)
+
+    print("    ", end="")
+    for v in vertices:
+        print(v, end="   ")
+    print()
 
     for i in range(len(vertices)):
-        print(vertices[i], matrix[i])
+        print(vertices[i], end="   ")
+
+        for j in range(len(vertices)):
+            if matrix[i][j] == math.inf:
+                print("∞", end="   ")
+            else:
+                print(matrix[i][j], end="   ")
+
+        print()
+
 
 # (B) BFS
 
@@ -72,6 +87,7 @@ def BFS(start):
 
     print("BFS Traversal:", order)
 
+
 # (C) DFS
 
 def DFS(start):
@@ -89,6 +105,7 @@ def DFS(start):
     dfsVisit(start)
 
     print("DFS Traversal:", order)
+
 
 # (D) DIJKSTRA
 
@@ -128,6 +145,7 @@ def dijkstra(start):
                     predecessor[neighbour] = current
 
     return distance, predecessor
+
 
 # (E) SHORTEST PATH
 
